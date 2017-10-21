@@ -33,7 +33,7 @@ int execute_command(char *command, command_t *list, int list_size)
 	}
 		
 	argv[0] = command;
-	while((argv[argc]=strtok(argv[argc], " \n"))!=NULL)//当在被分割的字符串中发现分割字符时，将该字符改为'\0'。
+	while((argv[argc]=strtok(argv[argc], " \r\n"))!=NULL)//当在被分割的字符串中发现分割字符时，将该字符改为'\0'。
 	{
         //printf("argv[%d] = %s\n", argc, argv[argc]);
         argc++;
